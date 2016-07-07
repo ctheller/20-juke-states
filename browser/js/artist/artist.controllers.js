@@ -4,14 +4,14 @@
 
 juke.controller('ArtistsCtrl', function ($scope, $log, $rootScope, ArtistFactory) {
 
-  $scope.$on('viewSwap', function (event, data) {
-    if (data.name !== 'allArtists') return $scope.showMe = false;
-    $scope.showMe = true;
-  });
+  // $scope.$on('viewSwap', function (event, data) {
+  //   if (data.name !== 'allArtists') return $scope.showMe = false;
+  //   $scope.showMe = true;
+  // });
 
-  $scope.viewOneArtist = function (artist) {
-    $rootScope.$broadcast('viewSwap', { name: 'oneArtist', id: artist.id });
-  };
+  // $scope.viewOneArtist = function (artist) {
+  //   // $rootScope.$broadcast('viewSwap', { name: 'oneArtist', id: artist.id });
+  // };
 
   ArtistFactory.fetchAll()
   .then(function (artists) {
