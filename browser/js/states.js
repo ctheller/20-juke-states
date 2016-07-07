@@ -1,4 +1,10 @@
-juke.config(function($stateProvider){
+juke.config(function($stateProvider, $urlRouterProvider){
+
+
+	$urlRouterProvider.when('/', '/albums');
+	$urlRouterProvider.when('', '/albums');
+	$urlRouterProvider.when('/artist/:id', '/artist/:id/albums');
+
 	$stateProvider
 		.state('allAlbums', {
 			url: "/albums",
