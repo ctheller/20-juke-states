@@ -4,10 +4,6 @@
 
 juke.controller('AlbumCtrl', function ($scope, $log, PlayerFactory, AlbumFactory, $stateParams) {
 
-  // $scope.$on('viewSwap', function (event, data) {
-  //   if (data.name !== 'oneAlbum') return $scope.showMe = false;
-    // $scope.showMe = true;
-
   AlbumFactory.fetchById($stateParams.id)
   .then(function (album) {
     $scope.album = album;
